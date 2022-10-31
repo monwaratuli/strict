@@ -1,0 +1,267 @@
+/* common class start */
+/* for custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+	padding: 0px;
+}
+:root{
+    --brand-color: #0da3be;
+    --white-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span, small{ 
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* common class end */
+
+/* nav section start */
+.navbar-nav .nav-item .nav-link{
+    text-transform: uppercase;
+    margin: 0px 5px;
+    font-weight: 400;
+    font-size: 25px;
+    position: relative;
+    color: #000;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--brand-color);
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--brand-color);
+}
+.navbar-nav .nav-active::after{
+    width: 100% !important;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    width: 0%;
+    height: 2px;
+    background: #0da3be;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    content: " ";
+    transition: .5s;
+}
+.navbar-nav .nav-item .nav-link:hover::after{
+    width: 100%;
+}
+
+/* nav section end */
+
+/* banner start */
+.banner {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)) ,url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner .banner-content{
+    padding: 100px 0px;
+}
+.banner .banner-content h1{
+    color: var(--white-color);
+    padding-top: 50px;
+    font-size: 120px;
+    line-height: 1.5;
+    font-weight: 700;
+    /* border-bottom: 1px solid var(--brand-color); */
+    position: relative;
+ }
+ .banner .banner-content h1::after{
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background: #0da3be;
+    bottom: 8px;
+    left: 0;
+ }
+ .banner-content p{
+    color: var(--white-color);
+    font-size: 18px;
+    /* padding-bottom: 50px; */
+ }
+ .banner-content a{
+    font-size: 15px;
+    padding: 8px 35px;
+    font-weight: 600;
+    transition: .4s all;
+ }
+ .banner-content .btn-primary{
+    background: none;
+    border: 1px solid var(--brand-color);
+ }
+ .banner-content .btn-primary:hover{
+    background: var(--brand-color);
+ }
+ 
+.banner-icon{ 
+    padding-bottom: 160px;
+ }
+
+.banner-icon i{
+    text-align: center;
+    margin: 45px 0px;
+    color: white;
+    font-weight: 800;
+}
+
+.titile-section {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h1 {
+    font-size: 6rem;
+}
+
+.title {
+    color: white;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    background-color: #2195f302;
+    border-radius: 3px;
+    padding: 9px 19px;
+    border-color: rgb(33, 150, 243);
+    color: white;
+}
+
+/* banner end*/
+
+/* simple desing star */
+
+.simple-desing {
+    background-color: #f6f9f9;
+    padding: 45px 0px;
+
+}
+
+.simple-title {
+    margin: auto;
+    width: 55%;
+}
+
+/* simple desing end */
+
+/* content start */
+
+.content {
+    padding: 45px 0px;
+}
+
+.serv i {
+    font-size: 50px;
+    background-color: var(--brand-color);
+    padding: 30px;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.content .serv i:hover{
+    background: var(--white-color);
+    color: var(--brand-color);
+    box-shadow: 0px 10px 20px rgb(40 40 40);
+}
+
+/* content end */
+
+/* gallary start */
+.service-content{
+    position: relative;
+    overflow: hidden;
+}
+
+.service-content img{
+    height: 100%;
+    width: 100%;
+}
+
+.service-content-overlay{
+    position: absolute;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    background: rgba(33,150,245,.5);
+    transition: .5s all;
+    cursor: pointer;
+}
+.service-content:hover .service-content-overlay{
+    top: 0px;
+}
+.service-content-overlay a{
+    text-decoration: none;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 10px;
+    margin-right: 6px;
+    transition: .5s all;
+    transform: translateY(90px);
+    display: inline-block;
+}
+.service-content-overlay a:hover{
+    background: var(--brand-color);
+}
+.service-content-overlay .fa-brands .fa-facebook{
+    height: 20px;
+    width: 22px;
+    display: inline-block;
+}
+.service-content-overlay .fa-solid .fa-link{
+    height: 20px;
+    width: 23px;
+    display: inline-block;
+}
+
+/* gallary end */
+
+
+
+/* contact form start */
+
+.contact {
+    background: linear-gradient(rgba(45, 47, 80, 0.8), rgba(45, 47, 80, 0.8)), url(../img/stay-us-banner.jpg);
+    height: 100vh;
+}
+
+.button {
+    width: 150px;
+}
+
+.form-control {
+    background-color: #ffffff05 !important;
+}
+
+/* contact form end */
+
+/* footer start */
+.foot-icon i {
+    font-size: 15px;
+    background-color: var(--brand-color);
+    padding: 5px;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.foot-icon i:hover{
+    background: var(--white-color);
+    color: var(--brand-color);
+}
+
+/* footer end */
